@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: skyblue;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cloud {
+  background: transparent;
+  min-height: 89px;
+  min-width: 200px;
+  height: 89px;
+  width: 200px;
+  background-image: url(clouddd.png);
+  background-size:cover;
+  position: relative;
+}
+
+.blocks {
+  margin-top: 2.5vh;
+  height: (100/6) vh;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.block1cloud1,
+.block3cloud1,
+.block5cloud1,
+.block1cloud2,
+.block3cloud2,
+.block5cloud2,
+.block1cloud3,
+.block3cloud3,
+.block5cloud3 {
+  right: 100px;
+  left: -120px;
+}
+
+.block2cloud1,
+.block4cloud1,
+.block6cloud1,
+.block2cloud2,
+.block4cloud2,
+.block6cloud2,
+.block2cloud3,
+.block4cloud3,
+.block6cloud3 {
+  left: 70px;
+}
+
+.block1cloud1{
+    animation: cloud1 18s linear infinite;
+}
+
+.block1cloud2{
+    animation: cloud2 14s linear infinite;
+}
+.block1cloud3{
+    animation: cloud3 19s linear infinite;
+}
+.block2cloud1{
+    animation: cloud1 11s linear infinite;
+}
+.block2cloud2{
+    animation: cloud2 12s linear infinite;
+}
+.block2cloud3{
+    animation: cloud3 13s linear infinite;
+}
+.block3cloud1{
+    animation: cloud1 15s linear infinite;
+}
+
+.block3cloud2{
+    animation: cloud2 9Ss linear infinite;
+}
+.block3cloud3{
+    animation: cloud3 20s linear infinite;
+}
+.block4cloud1{
+    animation: cloud1 14S linear infinite;
+}
+.block4cloud2{
+    animation: cloud2 17s linear infinite;
+}
+.block4cloud3{
+    animation: cloud3 16s linear infinite;
+}
+.block5cloud1{
+    animation: cloud1 13s linear infinite;
+}
+
+.block5cloud2{
+    animation: cloud2 8s linear infinite;
+}
+.block5cloud3{
+    animation: cloud3 10s linear infinite;
+}
+.block6cloud1{
+    animation: cloud1 13s linear infinite;
+}
+.block6cloud2{
+    animation: cloud2 12s linear infinite;
+}
+.block6cloud3{
+    animation: cloud3 10s linear infinite;
+}
+
+@keyframes cloud1 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+    
+}
+
+@keyframes cloud2 {
+    0% {
+        transform: translateX(0); /* Start at initial position (50px from left) */
+    }
+    50% {
+        transform: translateX(calc(100vw - 70px)); /* Move to the right end (100vw - 50px - cloud width) */
+    }
+    50.01% {
+        transform: translateX(-50vw); /* Instantly move to the left end */
+    }
+    100% {
+        transform: translateX(0); /* Move back to initial position */
+    }
+}
+
+@keyframes cloud3{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(calc(100vw - 70vw));
+    }
+    50.01%{
+        transform: translateX(-120vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+.aeroplane{
+    background: transparent;
+    height: 300px;
+    position: absolute;
+    left: -350px;
+    animation: aeroplaneMove 10s linear infinite;
+}
+
+@keyframes aeroplaneMove{
+    from{
+        transform: translateX(-10vw);
+    }to{
+        transform: translateX(130vw);
+    }
+}
